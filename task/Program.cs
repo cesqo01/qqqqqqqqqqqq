@@ -9,3 +9,46 @@
 [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 [“Russia”, “Denmark”, “Kazan”] → []
 */
+
+string[] ThreeSymbolsArr(string[] arr)
+{
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            count += 1;
+        }
+
+    }
+
+    string[] result = new string[count];
+    int k = 0;
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            result[k] = arr[i];
+            k++;
+        }
+    }
+    return result;
+}
+
+void PrintArray(string[] arr)
+{
+    Console.WriteLine("");
+    Console.Write("[");
+    for (int i = 0; i < arr.Length - 1; i++)
+    {
+        Console.Write($"{arr[i]}, ");
+    }
+    Console.Write($"{arr[arr.Length - 1]}]");
+}
+
+string[] array = new string[] { "Sun", "Mon", "Tue", "Wed6", "Th2u", "F11ri", "Sat55", "231321", "23" };
+PrintArray(array);
+string[] newArray = ThreeSymbolsArr(array);
+Console.WriteLine();
+PrintArray(newArray);
