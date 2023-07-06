@@ -45,7 +45,6 @@ string[] ThreeSymbolsArr(string[] arr)
 
 void PrintArray(string[] arr)
 {
-    Console.WriteLine("");
     Console.Write("[");
     for (int i = 0; i < arr.Length - 1; i++)
     {
@@ -57,5 +56,5 @@ void PrintArray(string[] arr)
 string[] array = new string[] { "Russia", "Denmark", "Kazan" };
 PrintArray(array);
 string[] newArray = ThreeSymbolsArr(array);
-Console.WriteLine();
+Console.Write(" -> ");
 PrintArray(newArray);
