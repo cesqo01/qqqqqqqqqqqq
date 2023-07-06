@@ -21,16 +21,23 @@ string[] ThreeSymbolsArr(string[] arr)
         }
 
     }
-
     string[] result = new string[count];
-    int k = 0;
-
-    for (int i = 0; i < arr.Length; i++)
+    if (count == 0)
     {
-        if (arr[i].Length <= 3)
+        string[] array = new string[] { "" };
+        return array;
+    }
+
+    else
+    {
+        int k = 0;
+        for (int i = 0; i < arr.Length; i++)
         {
-            result[k] = arr[i];
-            k++;
+            if (arr[i].Length <= 3)
+            {
+                result[k] = arr[i];
+                k++;
+            }
         }
     }
     return result;
@@ -47,7 +54,7 @@ void PrintArray(string[] arr)
     Console.Write($"{arr[arr.Length - 1]}]");
 }
 
-string[] array = new string[] { "Sun", "Mon", "Tue", "Wed6", "Th2u", "F11ri", "Sat55", "231321", "23" };
+string[] array = new string[] { "Russia", "Denmark", "Kazan" };
 PrintArray(array);
 string[] newArray = ThreeSymbolsArr(array);
 Console.WriteLine();
