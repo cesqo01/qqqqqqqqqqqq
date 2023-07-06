@@ -53,7 +53,7 @@ void PrintArray(string[] arr)
     Console.Write($"{arr[arr.Length - 1]}]");
 }
 
-string[] array = new string[] { "Russia", "Denmark", "Kazan" };
+string[] array = new string[] { "62352", "211", "0" };
 PrintArray(array);
 string[] newArray = ThreeSymbolsArr(array);
 Console.Write(" -> ");
